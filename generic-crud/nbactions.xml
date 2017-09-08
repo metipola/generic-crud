@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+    <action>
+        <actionName>CUSTOM-DEBUG</actionName>
+        <displayName>DEBUG</displayName>
+        <goals>
+            <goal>clean</goal>
+            <goal>tomcat7:run-war</goal>
+        </goals>
+        <properties>
+            <Env.MAVEN_OPTS>-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.rmi.port=9999 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false</Env.MAVEN_OPTS>
+        </properties>
+    </action>
+</actions>
